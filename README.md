@@ -41,9 +41,19 @@ npm run lint:fix
 npm run test
 ```
 
-## 参考信息
+## 技术栈介绍
 
-* [ant-design-pro官方网站](https://pro.ant.design)
+* [ant-design-pro](https://pro.ant.design)：一套可用于生产环境的一揽子管理系统模板。
+
+* [react](https://reactjs.org/)：用于构建用户界面的JavaScript库。
+
+* [UmiJS](https://umijs.org/)：可拓展的企业级前端应用框架。
+
+* [dva](https://dvajs.com/)：基于react和redux的轻量级框架。
+
+* [g2](https://g2.antv.vision/)：是一套面向常规统计图表，以数据驱动的高交互可视化图形语法。
+
+* [ant design](https://ant.design/)：企业级产品设计体系。
 
 ## 协议/License
 
