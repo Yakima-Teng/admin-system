@@ -43,17 +43,17 @@ npm run test
 
 ## 二、技术栈介绍
 
-- [ant-design-pro](https://pro.ant.design)：一套可用于生产环境的一揽子管理系统模板。
+-   [ant-design-pro](https://pro.ant.design)：一套可用于生产环境的一揽子管理系统模板。
 
-- [react](https://reactjs.org/)：用于构建用户界面的 JavaScript 库。
+-   [react](https://reactjs.org/)：用于构建用户界面的 JavaScript 库。
 
-- [UmiJS](https://umijs.org/)：可拓展的企业级前端应用框架。
+-   [UmiJS](https://umijs.org/)：可拓展的企业级前端应用框架。
 
-- [dva](https://dvajs.com/)：基于 react 和 redux 的轻量级框架。
+-   [dva](https://dvajs.com/)：基于 react 和 redux 的轻量级框架。
 
-- [g2](https://g2.antv.vision/)：是一套面向常规统计图表，以数据驱动的高交互可视化图形语法。
+-   [g2](https://g2.antv.vision/)：是一套面向常规统计图表，以数据驱动的高交互可视化图形语法。
 
-- [ant design](https://ant.design/)：企业级产品设计体系。
+-   [ant design](https://ant.design/)：企业级产品设计体系。
 
 ## 三、常见问题
 
@@ -71,7 +71,7 @@ npm run test
 }
 ```
 
-## 配置/文件分析
+## 四、配置/文件分析
 
 1. [tsconfig.json 文件分析](./docs/tsconfig-analysis.md)
 
