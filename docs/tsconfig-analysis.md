@@ -109,6 +109,36 @@ TypeScript 是如何决定使用哪个配置文件的呢？
 
 `extends`和`compilerOptions`、`files`、`include`、`exclude`选项一样，都是最外层的配置属性。它的属性值是一个字符串，这个字符串应当是一个指向其他配置文件（被继承的配置文件）的路径。如果配置文件 A 通过`extends`属性继承了配置文件 B 的配置，那么配置文件 A 中如果有和配置文件 B 中相同的配置项，配置文件 A 中的配置项会被配置文件 B 中的配置项覆盖。`files`、`include`、`exclude`也是一样。
 
-## 四、参考资料
+## 四、常见 compilerOptions 选项介绍
+
+```javascript
+{
+    "outDir": "build/dist", // 指明编译产物输出路径，如未指定，.js文件会被直接编译到跟源文件同目录下。
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "jsx": "react", // Emit .js files with JSX changed to the equivalent React.createElement calls
+    "allowSyntheticDefaultImports": true, // 允许使用`import React from "react"`而非`import * as React from "react"`
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "paths": {// A series of entries which re-map imports to lookup locations relative to the baseUrl
+      "@/*": ["./src/*"], // this mapping is relative to "baseUrl"
+      "@@/*": ["./src/.umi/*"] // this mapping is relative to "baseUrl"
+    }
+}
+```
+
+注：全部选项的介绍可以看这里：[https://www.typescriptlang.org/v2/en/tsconfig](https://www.typescriptlang.org/v2/en/tsconfig)
+
+## 五、参考资料
 
 -   [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
