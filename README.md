@@ -4,7 +4,7 @@
 
 **_请注意，Ant Design Pro 支持范围为 IE10+，开发时需要确保 Node 10+环境。_**
 
-## 常用方法
+## 一、常用方法
 
 1、安装依赖
 
@@ -41,7 +41,7 @@ npm run lint:fix
 npm run test
 ```
 
-## 技术栈介绍
+## 二、技术栈介绍
 
 - [ant-design-pro](https://pro.ant.design)：一套可用于生产环境的一揽子管理系统模板。
 
@@ -55,12 +55,12 @@ npm run test
 
 - [ant design](https://ant.design/)：企业级产品设计体系。
 
-## 常见问题
+## 三、常见问题
 
 1. 问题：安装依赖时提示`Unexpected end of JSON input while parsing near`
 
 解决方案：先执行`npm cache clean --force`清除缓存，再重新`npm install`安装依赖。还不行的话尝试切换镜像地址进行安装，如：`npm install --registry=https://registry.npm.taobao.org`。还不行就换成用`yarn`安装。因为 ant design pro 本身模板没有带`package-lock.json`或者`yarn.lock`文件，所以不清楚是依赖没锁定导致我安装时最新的依赖彼此之间有冲突还是因为我用了 nvm 导致的，最终我是通过 yarn 来成功安装的。我把`yarn.lock`文件纳入了 git 版本控制，方便各位以后使用（不可用的话删掉即可）。
 
-## 协议/License
+## 四、协议/License
 
 无协议，可随意使用，但因使用造成的风险请自行承担。一旦使用本项目，即视为接受本条款。
