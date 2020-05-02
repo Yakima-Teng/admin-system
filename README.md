@@ -1,6 +1,8 @@
 # admin-system
 
-> 该项目为一个使用[Ant Design Pro](https://pro.ant.design)创建的后台项目模板。
+> 该项目为一个使用[Ant Design Pro](https://pro.ant.design)创建的后台项目模板。项目技术栈为ES2015+、React、UmiJS、dva、g2和antd4+.
+
+***请注意，Ant Design Pro支持范围为IE10+，开发时需要确保Node 10+环境。***
 
 ## 常用方法
 
