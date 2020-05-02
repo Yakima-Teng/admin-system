@@ -57,9 +57,19 @@ npm run test
 
 ## 三、常见问题
 
-1. 问题：安装依赖时提示`Unexpected end of JSON input while parsing near`
+1、问题：安装依赖时提示`Unexpected end of JSON input while parsing near`
 
 解决方案：先执行`npm cache clean --force`清除缓存，再重新`npm install`安装依赖。还不行的话尝试切换镜像地址进行安装，如：`npm install --registry=https://registry.npm.taobao.org`。还不行就换成用`yarn`安装。因为 ant design pro 本身模板没有带`package-lock.json`或者`yarn.lock`文件，所以不清楚是依赖没锁定导致我安装时最新的依赖彼此之间有冲突还是因为我用了 nvm 导致的，最终我是通过 yarn 来成功安装的。我把`yarn.lock`文件纳入了 git 版本控制，方便各位以后使用（不可用的话删掉即可）。
+
+2、问题：执行`yarn start`后，打开的页面提示：`Error: Cannot find module './locale'`
+
+解决方案：我遇到该问题时发现，ant design pro 的 package.json 文件中指定的 moment 依赖版本为 2.24.0 及以上，所以实际安装后在 yarn.lock 中安装的 2.25.1 版本。但是换成 2.24.0 版本的话就可以正常用了。具体方案是，先删除新版本的 moment 依赖（`yarn remove moment`），重新安装 2.24.0 版本的 moment 依赖即可（`yarn add moment@2.24.0`）。安装后查看 yarn.lock 文件，发现由于其他 npm 包的间接依赖设定，还是会有高版本的 moment 被安装。如解决方案是在 package.json 文件中添加下述字段（效果是让间接依赖使用我们在 resolutions 里指定的版本），然后重新 yarn install。
+
+```json
+"resolutions": {
+  "moment": "2.24.0"
+}
+```
 
 ## 四、协议/License
 
