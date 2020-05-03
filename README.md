@@ -11,6 +11,9 @@
 ```bash
 # 在项目根目录下执行
 npm install
+
+# 如果依赖安装较慢，可以使用淘宝镜像来安装
+npm i --registry=https://registry.npm.taobao.org
 ```
 
 2、本地开发
